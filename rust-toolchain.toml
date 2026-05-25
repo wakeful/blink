@@ -1,0 +1,9 @@
+# Copyright 2026 variHQ OÜ
+# SPDX-License-Identifier: BSD-3-Clause
+
+[toolchain]
+channel = "1.95.0"
+targets = [
+  "x86_64-apple-darwin",
+  "aarch64-apple-darwin",
+]

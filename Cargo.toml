@@ -1,0 +1,41 @@
+# Copyright 2026 variHQ OÜ
+# SPDX-License-Identifier: BSD-3-Clause
+
+[package]
+name = "blink"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Move any macOS window by holding left Cmd + left mouse button."
+
+[package.metadata.bundle]
+name = "Blink"
+identifier = "com.varihq.blink"
+short_description = "Hold left Cmd and drag any macOS window."
+category = "public.app-category.utilities"
+copyright = "Copyright 2026 variHQ OÜ"
+osx_minimum_system_version = "13.0"
+osx_info_plist_exts = ["Info.plist"]
+icon = ["assets/Blink.icns"]
+
+[dependencies]
+core-foundation = "0.10"
+core-graphics = "0.25"
+accessibility-sys = "0.2"
+objc2 = "0.6"
+objc2-foundation = "0.3"
+objc2-app-kit = "0.3"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "forbid"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+multiple_unsafe_ops_per_block = "warn"
+module_name_repetitions = "allow"
