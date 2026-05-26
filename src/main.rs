@@ -1,7 +1,7 @@
 // Copyright 2026 variHQ OÜ
 // SPDX-License-Identifier: BSD-3-Clause
 
-//! Blink - hold left cmd and drag any macOS window from anywhere inside it.
+//! Blink - hold left option and drag any macOS window from anywhere inside it.
 
 mod ax;
 mod menu;

@@ -1,6 +1,6 @@
 # blink
 
-Move any macOS window by holding left Cmd + left mouse button.
+Move any macOS window by holding left Option + left mouse button.
 
 ## Building
 

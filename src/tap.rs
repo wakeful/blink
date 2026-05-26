@@ -1,7 +1,7 @@
 // Copyright 2026 variHQ OÜ
 // SPDX-License-Identifier: BSD-3-Clause
 
-//! `CGEventTap` that turns Cmd-drag-anywhere into a window move.
+//! `CGEventTap` that turns Option-drag-anywhere into a window move.
 
 use std::cell::{OnceCell, RefCell};
 use std::rc::Rc;
@@ -16,7 +16,7 @@ use core_graphics::event::{
 };
 use core_graphics::geometry::CGPoint;
 
-const DRAG_MODIFIERS: CGEventFlags = CGEventFlags::CGEventFlagCommand;
+const DRAG_MODIFIERS: CGEventFlags = CGEventFlags::CGEventFlagAlternate;
 const MODIFIER_MASK: CGEventFlags = CGEventFlags::from_bits_truncate(
     CGEventFlags::CGEventFlagCommand.bits()
         | CGEventFlags::CGEventFlagShift.bits()
